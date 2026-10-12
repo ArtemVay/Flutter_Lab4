@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lab4_app/gradient_container.dart';
+import 'gradient_container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: (Scaffold(body: GradientContainer(Colors.white, Colors.blue, Colors.red))),
+      home: Scaffold(body: GradientContainer()),
     ),
   );
 }
