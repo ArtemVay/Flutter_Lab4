@@ -1,17 +1,32 @@
-# flutter_lab4_app
+# Лабораторная работа №4-5. Flutter: структура UI и компонентный подход.
 
-A new Flutter project.
+**ФИО: Вайнбендер Артём Алексеевич**
+**Группа: ИСП-241**
+**Дата сдачи: 12.10.2026**
 
-## Getting Started
+## Что изучили:
 
-This project is a starting point for a Flutter application.
+1. Изучили разницу между StatelessWidget и StatefulWidget.
+2. Научились управлять состоянием интерфейса с помощью setState().
+3. Реализовали генерацию случайных чисел для игры в кости.
 
-A few resources to get you started if this is your first Flutter project:
+## Скриншот финального приложения:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![img](lib/img/imgstep6_Vainbender.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ссылка на репозиторий:
+
+[GitHub]()
+
+## Инструкция по запуску:
+
+1. Склонируйте репозиторий.
+2. Выполните `flutter pub get` для установки зависимостей.
+3. Запустите приложение командой `flutter run`.
+
+## Ответы на вопросы:
+
+1. Улучшается читаемость кода, упрощается навигация и появляется возможность переиспользовать компоненты. Если держать всё в `main.dart`, файл разрастется до тысяч строк, в нем будет сложно искать ошибки и вносить изменения.
+2. Это объект с информацией о месте виджета в дереве. Flutter передает его автоматически. Он нужен, чтобы виджет мог получать данные от родительских элементов.
+3. `StatelessWidget` отрисовывается один раз и не меняется. `StatefulWidget` хранит состояние и может перерисовываться при его изменении через `setState()` (например, счетчик, чекбокс, игральная кость).
+4. Если создавать `Random()` внутри функции, которая вызывается при каждом нажатии кнопки, будет создаваться новый генератор случайных чисел. Это неэффективно. Создание одного глобального объекта Random на уровне файла позволяет использовать его повторно.
